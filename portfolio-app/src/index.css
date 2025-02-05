@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+body {
+  @apply text-white bg-slate-950 tracking-wider;
+}
+
+section {
+  @apply mt-12;
+}
+
+section > div {
+  @apply max-w-screen-lg px-4 mx-auto;
+}
+
+#root {
+  @apply flex flex-col min-h-screen;
+}
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-lg uppercase tracking-widest;
+}
+
+h3 {
+  @apply text-lg uppercase tracking-widest;
+}
+
+h4 {
+  @apply text-xl;
+}
+
+h5 {
+  @apply text-lg;
+}
+
+h6 {
+  @apply text-lg;
+}
+
+a {
+  @apply text-fuchsia-200 w-fit inline-block overflow-hidden;
+
+  &:after {
+    @apply block w-full h-[1px] bg-fuchsia-200 absolute bottom-0 content-[''] relative right-full transition-[right] duration-300;
+  }
+
+  &:not(:has(button)):hover {
+    &:after {
+      @apply right-0;
+    }
+  }
+}
+
+button {
+  @apply cursor-pointer px-6 py-2 w-50 border text-white border-fuchsia-300 rounded-md uppercase tracking-widest text-sm hover:bg-slate-900 hover:text-slate-300 hover:border-fuchsia-400 transition-colors duration-200;
+}
